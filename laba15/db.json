@@ -1,0 +1,22 @@
+{
+  "persons": [
+    {
+      "firstName": "адна",
+      "lastName": "Недоа",
+      "phone": "7672655708",
+      "id": 1
+    },
+    {
+      "firstName": "Бесит",
+      "lastName": "меня",
+      "phone": "9210880858",
+      "id": 2
+    },
+    {
+      "firstName": "девдаор",
+      "lastName": "домоюрм",
+      "phone": "6976976477",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="mb-3">
+        <input type="text" class="form-control col-3 mt-2" placeholder="по имени" [(ngModel)]="byFirstName">
+        <input type="text" class="form-control col-3 mt-2" placeholder="по фамилии" [(ngModel)]="byLastName">
+    </div>
+
+    <div *ngIf="persons" class="per ml-5 mt-2">
+        <div *ngFor="let person of persons | filtering : byFirstName : byLastName" class="pers mt-2"> {{person.firstName}}   {{person.lastName}}   {{person.phone}} 
+            <a class="btn btn-warning mr-2 ml-2" [routerLink]="['edit', person.id]"> Редактировать</a>
+            <button class="btn btn-danger" (click)="onDelete(person.id)"> Удалить </button>
+            
+        </div>
+    </div>
+</div>
+

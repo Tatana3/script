@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup]="formEdit" (ngSubmit)="onEdit()">
+    <div class="form-group">
+      <label class="mb-0" for="exampleInputEmail1">Имя</label>
+      <input formControlName="firstName" type="text" class="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label class="mb-0" for="exampleInputPassword1">Фамилия</label>
+      <input formControlName="lastName" type="text" class="form-control mb-2" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label class="mb-0" for="exampleInputPassword1">Номер телефона</label>
+        <input formControlName="phone" type="text" class="form-control mb-2" id="exampleInputPassword1" mask="(000)000-00-00" prefix="+7"[showMaskTyped]="true">
+      </div>
+    <button type="submit" class="btn btn-success" [disabled]="formEdit.invalid">Submit</button>
+  </form>
+</div>
