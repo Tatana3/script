@@ -18,8 +18,8 @@ export class AddformWorkerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onAddWorker(name: string, surname:string) {
-    if(name==null||name==""||surname==null||surname==""){
+  onAddWorker() {
+    if(this.name==null||this.name==""||this.surname==null||this.surname==""){
     return;
     }
     else{

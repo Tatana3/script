@@ -10,13 +10,14 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 export class TableWorkersComponent implements OnInit {
   @Input() title: string;
   @Input() workers: MyWorker[] = [];
+  @Output() deleteWorker = new EventEmitter<number>();
   myWorkerType = MyWorkerType;
   editWorker = -1;
   name;
   surname;
   type = 0;
 
-  @Output() deleteWorker = new EventEmitter<number>();
+
 
   constructor(
     
@@ -39,12 +40,16 @@ export class TableWorkersComponent implements OnInit {
   }
   
   onEditWorker(){
-    console.log(this.name, this.surname, this.workers[this.editWorker-1]);
-    let worker = this.workers[this.editWorker-1];
-    worker.name = this.name;
-    worker.surname = this.surname;
-    worker.type = this.type;
-    this.editWorker = -1;
+    if(this.name==null||this.name==""||this.surname==null||this.surname==""){
+      return;
+      }
+      else{
+        let worker = this.workers[this.editWorker-1];
+        worker.name = this.name;
+        worker.surname = this.surname;
+        worker.type = this.type;
+        this.editWorker = -1;
+      }
   }
  
 }

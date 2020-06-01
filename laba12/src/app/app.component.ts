@@ -34,4 +34,9 @@ export class AppComponent {
     worker.id = id;
     this.workers.push(worker);
   }
+
+  onChangeWorker(worker: MyWorker) {
+        let newWorker = worker;
+        this.workers.push(newWorker);
+  }
 }
