@@ -32,19 +32,22 @@ export class TableWorkersComponent implements OnInit {
   }
 
   onEdit(id){
-    this.editWorker = id;
-    this.name = this.workers[this.editWorker-1].name;
-    this.surname = this.workers[this.editWorker-1].surname;
+    let w = this.workers.find(worker => worker.id === id);
+    console.log(w);
+    this.editWorker = w.id;
+    this.name = w.name;
+    this.surname = w.surname;
     
-    console.log(this.name, this.surname, this.workers[this.editWorker-1]);
+    console.log(this.name, this.surname, w);
   }
   
-  onEditWorker(){
+  onEditWorker(id){
     if(this.name==null||this.name==""||this.surname==null||this.surname==""){
       return;
       }
       else{
-        let worker = this.workers[this.editWorker-1];
+        let w = this.workers.find(worker => worker.id === id);
+        let worker = w;
         worker.name = this.name;
         worker.surname = this.surname;
         worker.type = this.type;

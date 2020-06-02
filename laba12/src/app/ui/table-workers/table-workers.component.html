@@ -38,7 +38,7 @@
             <td>
               <button *ngIf="editWorker == worker.id"
                 class="btn btn-outline-warning btn-sm"
-                (click)="onEditWorker()"
+                (click)="onEditWorker(worker.id)"
               >
                 Сохранить
               </button>
