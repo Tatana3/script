@@ -30,7 +30,7 @@ export class AddformWorkerComponent implements OnInit {
     })
   }
 
-  onAddWorker(name: string, surname:string) {
+  onAddWorker() {
     this.addWorker.emit({
     name: this.formAdd.value.name,
     surname: this.formAdd.value.surname,

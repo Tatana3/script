@@ -6,6 +6,9 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class WorkersService extends API{
+  find(arg0: (worker: any) => boolean) {
+    throw new Error("Method not implemented.");
+  }
 
   header: HttpHeaders;
   url = "workers";
@@ -31,6 +34,5 @@ export class WorkersService extends API{
   async deleteWorker(id: number) {
     return this.delete (`${this.url}/${id}`, this.header).toPromise();
   }
-  
 }
 

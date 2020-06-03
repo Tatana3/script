@@ -23,7 +23,7 @@
             <td *ngIf="editWorker == worker.id"><input class="form-control" type="text" [(ngModel)] ="surname"></td>
             <td *ngIf="editWorker == worker.id"><input class="form-control" type="text" [(ngModel)] ="phone" mask="(000) 000-00-00" prefix="8" [showMaskTyped]="true"></td>
             <td>
-              <select class="custom-select" [(ngModel)]="type">
+              <select class="custom-select" [(ngModel)]="type" [ngModelOptions]="{standalone: true}">
                 <option [ngValue]="myWorkerType.programmer">Программист</option>
                 <option [ngValue]="myWorkerType.designer">Дизайнер</option>
                 <option [ngValue]="myWorkerType.copywriter">Рекламщик</option>
@@ -31,19 +31,19 @@
               </select>
             </td>
             <td>
-              <button *ngIf="editWorker !== worker.id"
-                class="btn btn-outline-warning btn-sm"
-                (click)="onEdit(worker.id)"
-              >
-                Редактировать
-              </button>
-            </td>
-            <td>
               <button *ngIf="editWorker == worker.id"
                 class="btn btn-outline-warning btn-sm"
                 (click)="onEditWorker(worker.id)"
               >
                 Сохранить
+              </button>
+            </td>
+            <td>
+              <button *ngIf="editWorker !== worker.id"
+                class="btn btn-outline-warning btn-sm"
+                (click)="onEdit(worker.id)"
+              >
+                Редактировать
               </button>
             </td>
             <td>

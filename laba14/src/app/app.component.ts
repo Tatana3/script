@@ -55,8 +55,6 @@ export class AppComponent implements OnInit{
       this.getData();
     }
   }
-  
-  
 
   async getData() {
 

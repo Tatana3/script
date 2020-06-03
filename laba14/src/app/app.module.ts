@@ -22,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

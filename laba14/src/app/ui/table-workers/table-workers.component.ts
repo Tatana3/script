@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MyWorker, MyWorkerType } from 'src/app/shared/worker.model';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { WorkersService } from 'src/app/shared/workers.service';
 
 @Component({
   selector: 'app-table-workers',
@@ -16,12 +17,11 @@ export class TableWorkersComponent implements OnInit {
   surname;
   phone;
   type = 0;
-  
 
   @Output() deleteWorker = new EventEmitter<number>();
 
   constructor(
-    
+    private workerService: WorkersService
     ) {}
 
   ngOnInit(): void {
@@ -41,21 +41,22 @@ export class TableWorkersComponent implements OnInit {
     this.phone = w.phone;
     //console.log(this.name, this.surname, this.workers[this.editWorker-1]);
   }
-  
-  onEditWorker(id){
+
+  async onEditWorker(id){
     if(this.name==null||this.name==""||this.surname==null||this.surname==""){
       return;
-      }
-      else{
-        let w = this.workers.find(worker => worker.id === id);
-        let worker = w;
-        worker.name = this.name;
-        worker.surname = this.surname;
-        worker.phone = this.phone;
-        worker.type = this.type;
-        this.editWorker = -1;
-        
-      }
+    }
+    else{
+      let w = this.workers.find(worker => worker.id === id);
+      let worker = w;
+      worker.name = this.name;
+      worker.surname = this.surname;
+      worker.phone = this.phone;
+      worker.type = this.type;
+
+      await this.workerService.putWorker(id,worker);
+    
+    }
   }
  
 }
