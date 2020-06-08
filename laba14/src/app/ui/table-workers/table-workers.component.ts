@@ -25,7 +25,6 @@ export class TableWorkersComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-
   }
 
   onDeleteWorker(id: number) {
@@ -39,7 +38,7 @@ export class TableWorkersComponent implements OnInit {
     this.name = w.name;
     this.surname = w.surname;
     this.phone = w.phone;
-    //console.log(this.name, this.surname, this.workers[this.editWorker-1]);
+    
   }
 
   async onEditWorker(id){
@@ -54,9 +53,11 @@ export class TableWorkersComponent implements OnInit {
       worker.phone = this.phone;
       worker.type = this.type;
 
-      await this.workerService.putWorker(id,worker);
-    
+      this.workerService.putWorker(id,worker);
+      console.log(worker);//проверяю, что изменятся
+      location.reload()
     }
+    
   }
  
 }
