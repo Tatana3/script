@@ -1,36 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ViewComponent } from './view/view.component';
-import { EditComponent } from './edit/edit.component';
-import { AddComponent } from './add/add.component';
-import { HttpClientModule } from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { TableWorkersComponent } from './ui/table-workers/table-workers.component';
+import { AddformWorkerComponent } from './ui/addform-worker/addform-worker.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxMaskModule} from 'ngx-mask';
-import { FilteringPipe } from './shared/filtering.pipe'
+import { HttpClientModule } from '@angular/common/http';
+import { FilteringPipe } from './shared/filtering.pipe';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ViewComponent,
-    EditComponent,
-    AddComponent,
-    FilteringPipe
-  ],
+  declarations: [AppComponent, TableWorkersComponent, AddformWorkerComponent, FilteringPipe],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    HttpClientModule,
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

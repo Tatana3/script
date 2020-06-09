@@ -5,21 +5,10 @@ import { isNullOrUndefined } from 'util';
   name: 'filtering'
 })
 export class FilteringPipe implements PipeTransform {
-
-  transform(arr:any[], firstNameParam:string, lastNameParam:string) {
-    if ( !isNullOrUndefined(firstNameParam) && firstNameParam !== ''){
-      let filter = arr.filter(
-      ell => ell.firstName.toLowerCase().indexOf(firstNameParam.toLowerCase()) === 0);// каждый эл массива и проверяет
-      return filter;
-      }
-      
-      if ( !isNullOrUndefined(lastNameParam) && lastNameParam !== ''){
-      let filter = arr.filter(
-      ell => ell.lastName.indexOf(String(lastNameParam)) === 0);
-      return filter;
-      }
-      
-      return arr;
+  
+  transform(arr: any[], filterName: string) {
+    if (( filterName != "" || filterName != null)) {
+      return arr.filter(worker => (worker.name + " " + worker.surname).toLowerCase().indexOf(filterName.toLowerCase()) !== -1);
+    };
   }
-
 }

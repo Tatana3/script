@@ -1,22 +1,39 @@
 {
-  "persons": [
+  "workers": [
     {
-      "firstName": "адна",
-      "lastName": "Недоа",
-      "phone": "7672655708",
+      "name": "Иван",
+      "surname": "Иванов",
+      "phone": "9210000001",
+      "type": 0,
       "id": 1
     },
     {
-      "firstName": "Бесит",
-      "lastName": "меня",
-      "phone": "9210880858",
+      "name": "Петр",
+      "surname": "Петр",
+      "phone": "9210000002",
+      "type": 1,
       "id": 2
     },
     {
-      "firstName": "девдаор",
-      "lastName": "домоюрм",
-      "phone": "6976976477",
+      "name": "Сидор",
+      "surname": "Сидоро",
+      "phone": "9210000003",
+      "type": 2,
       "id": 3
+    },
+    {
+      "name": "Васиий",
+      "surname": "Васильев",
+      "phone": "9210000004",
+      "type": 3,
+      "id": 4
+    },
+    {
+      "name": "Татьяна",
+      "surname": "Недосекина",
+      "phone": "9210880517",
+      "type": 1,
+      "id": 5
     }
   ]
 }
