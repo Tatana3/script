@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "Телевизор",
+      "artic": "RK-2345",
+      "price": "6500",
+      "manufact": "Soni",
+      "type": "1",
+      "poids": "3.5",
+      "id": "1"
+    },
+    {
+      "name": "Алиса в стране чудес",
+      "artic": "BD-1934",
+      "price": "600",
+      "manufact": "Печатный двор",
+      "type": "2",
+      "poids": "0.3",
+      "id": "2"
+    },
+    {
+      "name": "iPhone SE",
+      "artic": "TM-6474",
+      "price": "39990",
+      "manufact": "Apple",
+      "type": "3",
+      "poids": "0.15",
+      "id": "3"
+    },
+    {
+      "name": "Диван",
+      "artic": "MD-7849",
+      "price": "9500",
+      "manufact": "IKEA",
+      "type": "0",
+      "poids": "9",
+      "id": "4"
+    }
+  ]
+}
