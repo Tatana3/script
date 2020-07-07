@@ -1,0 +1,29 @@
+<div>
+    <h2 class="h" style="text-align: center;">Каталог товаров на складе</h2>
+   
+    <div class="d-flex flex-row bd-highlight ml-5 mt-5">
+        <div class="id p-2 bd-highlight font-weight-bold" style="width:5%;">№</div>
+        <div class="name p-2 bd-highlight font-weight-bold" style="width:15%;">Наименование товара</div> 
+        <div class="id p-2 bd-highlight font-weight-bold" style="width:12%;">Категория</div>
+        <div class="poids p-2 bd-highlight font-weight-bold" style="width:8%;">Вес(кг)</div>
+        <div class="price p-2 bd-highlight font-weight-bold" style="width:13%;">Стоимость(руб)</div>
+        <div class="price p-2 bd-highlight font-weight-bold" style="width:15%;">Количество(шт</div>
+    </div>
+
+    <div *ngIf="products" class="per ml-5 mt-1">
+        <div *ngFor="let product of products| filtering : byKategori : byKolich" class="d-flex flex-row bd-highlight mb-3"> 
+            <div class="id p-2 bd-highlight" style="width:5%;">{{product.id}} </div>
+            <div class="name p-2 bd-highlight" style="width:15%;">{{product.name}}</div> 
+            <div class="kateg" style="width:8%;text-align: center;">{{product.type}}</div>
+            <div class="poids p-2 bd-highlight" style="width:10%; text-align: center;">{{product.poids}} </div>
+            <div class="price p-2 bd-highlight" style="width:13%; text-align: center;">{{product.price}}</div>
+            <div class="kolvo p-2 bd-highlight" style="width:15%; text-align: center;">
+                {{product.kolich}}
+                <button type="button" class="btn btn-secondary m-1">+</button>
+                <button type="button" class="btn btn-secondary m-1">-</button>
+            </div>
+            <a class="btn btn-warning mr-2 ml-2 " [routerLink]="['edit', product.id]"> Редактировать</a>
+            <button class="btn btn-danger" (click)="onDelete(product.id)"> Удалить </button>
+        </div>
+    </div>
+</div>
