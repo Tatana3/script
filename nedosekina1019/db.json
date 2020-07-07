@@ -5,8 +5,9 @@
       "artic": "RK-2345",
       "price": "6500",
       "manufact": "Soni",
-      "type": "1",
+      "type": "Техника",
       "poids": "3.5",
+      "kolich": "3",
       "id": "1"
     },
     {
@@ -14,8 +15,9 @@
       "artic": "BD-1934",
       "price": "600",
       "manufact": "Печатный двор",
-      "type": "2",
+      "type": "Книга",
       "poids": "0.3",
+      "kolich": "4",
       "id": "2"
     },
     {
@@ -23,8 +25,9 @@
       "artic": "TM-6474",
       "price": "39990",
       "manufact": "Apple",
-      "type": "3",
+      "type": "Телефоны",
       "poids": "0.15",
+      "kolich": "5",
       "id": "3"
     },
     {
@@ -32,8 +35,9 @@
       "artic": "MD-7849",
       "price": "9500",
       "manufact": "IKEA",
-      "type": "0",
+      "type": "Мебель",
       "poids": "9",
+      "kolich": "6",
       "id": "4"
     }
   ]

@@ -24,5 +24,5 @@ export class SpisokComponent implements OnInit {
     await this.http.deleteProduct(id);
     this.products = await this.http.getProducts();
   }
-
+  
 }
