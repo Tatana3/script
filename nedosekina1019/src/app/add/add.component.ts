@@ -20,12 +20,13 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     this.addForm = new FormGroup({
-      name: new FormControl({value:"", disabled: this.disabled}, [Validators.required,Validators.pattern("^[A-Za-zА-Яа-яЁё]")]),
+      name: new FormControl({value:"", disabled: this.disabled}, [Validators.required]),
       artic: new FormControl({value: "", disabled: this.disabled}, [Validators.required]),
-      price: new FormControl({value: "", disabled: this.disabled}, [Validators.required,Validators.pattern("^[0-9]{,7}")]),
+      price: new FormControl({value: "", disabled: this.disabled}, [Validators.required]),
       manufact: new FormControl({value: "", disabled: this.disabled}, [Validators.required]),
       type: new FormControl({value: "", disabled: this.disabled}, [Validators.required]),
-      poids: new FormControl({value: "", disabled: this.disabled}, [Validators.required])
+      poids: new FormControl({value: "", disabled: this.disabled}, [Validators.required]),
+      kolich: new FormControl({value: "", disabled: this.disabled}, [Validators.required])
     })
   }
 

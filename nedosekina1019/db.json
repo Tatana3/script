@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Телевизор",
-      "artic": "RK-2345",
+      "artic": "01-2345",
       "price": "6500",
       "manufact": "Soni",
       "type": "Техника",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Алиса в стране чудес",
-      "artic": "BD-1934",
+      "artic": "02-1934",
       "price": "600",
       "manufact": "Печатный двор",
       "type": "Книга",
@@ -22,7 +22,7 @@
     },
     {
       "name": "iPhone SE",
-      "artic": "TM-6474",
+      "artic": "03-6474",
       "price": "39990",
       "manufact": "Apple",
       "type": "Телефоны",
@@ -32,13 +32,63 @@
     },
     {
       "name": "Диван",
-      "artic": "MD-7849",
+      "artic": "04-7849",
       "price": "9500",
       "manufact": "IKEA",
       "type": "Мебель",
       "poids": "9",
       "kolich": "6",
       "id": "4"
+    },
+    {
+      "name": "Микроволновка",
+      "artic": "05-2385",
+      "price": "4500",
+      "manufact": "LG",
+      "type": "Техника",
+      "poids": "1.5",
+      "kolich": "12",
+      "id": "5"
+    },
+    {
+      "name": "Маленький принц",
+      "artic": "06-1094",
+      "price": "200",
+      "manufact": "Печатный двор",
+      "type": "Книга",
+      "poids": "0.25",
+      "kolich": "8",
+      "id": "6"
+    },
+    {
+      "name": "Honor 10",
+      "artic": "07-6004",
+      "price": "29990",
+      "manufact": "Huawei",
+      "type": "Телефоны",
+      "poids": "0.25",
+      "kolich": "5",
+      "id": "7"
+    },
+    {
+      "name": "Кровать",
+      "artic": "08-0049",
+      "price": "14500",
+      "manufact": "IKEA",
+      "type": "Мебель",
+      "poids": "9",
+      "kolich": "11",
+      "id": "8"
+    },
+    {
+      "name": "Телевизор",
+      "artic": "RK-2345",
+      "price": "6500",
+      "manufact": "Soni",
+      "type": "Техника",
+      "poids": "9",
+      "kolich": "1",
+      "id": "MOtCHMc"
     }
   ]
 }

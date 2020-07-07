@@ -10,7 +10,9 @@ import { EditComponent } from './edit/edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewComponent } from './view/view.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-//import {NgMaskModule} from 'ngx-mask'
+import { FilteringPipe } from './shared/filtering.pipe';
+import {NgxMaskModule} from 'ngx-mask';
+import { SortPipe } from './shared/sort.pipe'
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     SpisokComponent,
     AddComponent,
     EditComponent,
-    ViewComponent
+    ViewComponent,
+    FilteringPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,9 @@ import { HttpService } from '../shared/http.service';
 export class SpisokComponent implements OnInit {
 
   products: any=[{}];
+  
+  byKategori: string="";
+  byKolich: string="";
 
   constructor(
     public http:HttpService

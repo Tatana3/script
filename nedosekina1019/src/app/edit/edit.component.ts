@@ -34,7 +34,8 @@ export class EditComponent implements OnInit {
         price: new FormControl({value: this.product.price, disabled: this.disabled}, [Validators.required]),
         manufact: new FormControl({value: this.product.manufact, disabled: this.disabled}, [Validators.required]),
         type: new FormControl({value: this.product.type, disabled: this.disabled}, [Validators.required]),
-        poids: new FormControl({value: this.product.poids, disabled: this.disabled}, [Validators.required])
+        poids: new FormControl({value: this.product.poids, disabled: this.disabled}, [Validators.required]),
+        kolich: new FormControl({value: this.product.kolich, disabled: this.disabled}, [Validators.required]),
       })
     })
   }
