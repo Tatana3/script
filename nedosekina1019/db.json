@@ -1,16 +1,6 @@
 {
   "products": [
     {
-      "name": "Телевизор",
-      "artic": "01-2345",
-      "price": "6500",
-      "manufact": "Soni",
-      "type": "Техника",
-      "poids": "3.5",
-      "kolich": "3",
-      "id": "1"
-    },
-    {
       "name": "Алиса в стране чудес",
       "artic": "02-1934",
       "price": "600",
@@ -89,6 +79,16 @@
       "poids": "9",
       "kolich": "1",
       "id": "MOtCHMc"
+    },
+    {
+      "name": "Телевизор",
+      "artic": "TM-6474",
+      "price": "6500",
+      "manufact": "Soni",
+      "type": "Книги",
+      "poids": "9",
+      "kolich": "6",
+      "id": "QOxJmrh"
     }
   ]
 }
